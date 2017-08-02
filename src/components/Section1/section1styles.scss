@@ -27,10 +27,8 @@ $section1-height: 45em;
         height: 100%;
 
         & img {
-            min-height: 52em;
-            max-height: 52em;
-            min-width: 43em;
-            max-width: 43em;
+            height: 52em;
+            width: 43em;
             z-index: 2;
             pointer-events: none;
         }
@@ -162,6 +160,25 @@ $section1-height: 45em;
                     font-size: 250%;
                 }
             }
+        }
+    }
+}
+
+@media only screen and (max-width: $media-query) {
+    .section1-wrapper {
+        .content-wrapper {
+            flex-direction: column !important;
+        }
+
+        & img {
+            width: 21em !important;
+            height: 23em !important;
+        }
+
+        .righthalf-wrapper {
+            justify-content: center;
+            align-items: center;
+            z-index: 3;
         }
     }
 }
