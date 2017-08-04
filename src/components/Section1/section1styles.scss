@@ -1,7 +1,7 @@
 @import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
 
-$section1-height: 45em;
+$section1-height: 48em;
 
 // SECTION1 WRAPPER
 .section1-wrapper {
@@ -28,7 +28,7 @@ $section1-height: 45em;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        height: 85%;
+        height: 88%;
         z-index: 2;
 
         .info-wrapper {
@@ -46,8 +46,14 @@ $section1-height: 45em;
                     color: white;
                 }
 
-                hr {
-                    background-color: white;
+                h1 {
+                    transition: .5s;
+                }
+
+                i {
+                    &:hover {
+                        color: white;
+                    }
                 }
 
                 @include angle(after, false, 5deg);
@@ -65,7 +71,7 @@ $section1-height: 45em;
 
             & h3 {
                 display: inline-block;
-                color: grey;
+                opacity: .2;
                 margin: 0;
                 margin-bottom: .2em;
             }
@@ -77,11 +83,7 @@ $section1-height: 45em;
             }
         }
 
-        .icon {
-            &:hover {
-                color: white;
-            }
-        }
+        .icon {}
     }
 }
 

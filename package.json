@@ -12,6 +12,7 @@
     "babel-preset-react-app": "^3.0.1",
     "babel-runtime": "^6.25.0",
     "eslint-config-airbnb": "^15.0.2",
+    "font-awesome": "^4.7.0",
     "fsevents": "^1.1.2",
     "gem": "^2.4.2",
     "gh-pages": "^1.0.0",
@@ -32,6 +33,7 @@
     "sass-convert": "^0.5.2",
     "serve": "^6.0.3",
     "slick-carousel": "^1.6.0",
+    "svgo": "^0.7.2",
     "velocity-animate": "^1.5.0",
     "webfontloader": "^1.6.28",
     "yarn": "^0.27.5"

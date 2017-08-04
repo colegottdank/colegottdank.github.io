@@ -4,6 +4,7 @@ import img from "../../images/selfies/ColeGottdank_copy.png";
 import Button from "react-md/lib/Buttons";
 import Divider from "react-md/lib/Dividers";
 import Media from "react-md/lib/Media";
+import 'font-awesome/css/font-awesome.css';
 
 /*
 * Section1 contains both LeftHalf and RightHalf
@@ -69,7 +70,7 @@ const Info = props =>
 						<Button
 							icon
 							iconClassName={icon.icon}
-							tooltipLabel={icon.icon.replace(/fa|-/g, "")}
+							tooltipLabel={icon.icon.replace(/fa fa-/g, "")}
 							tooltipPosition="bottom"
 							className="icon"
 							key={icon.icon}
