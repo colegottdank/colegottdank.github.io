@@ -18,7 +18,7 @@ $arrow-hover: $primary-dark;
     .simpleslider-wrapper {
         display: inline-block;
         margin: 0;
-        width: 60%;
+        width: $width;
 
         // Arrows
         .slick-prev:before, .slick-next:before {
@@ -31,7 +31,7 @@ $arrow-hover: $primary-dark;
 
         .slick-track {
             display: flex;
-            height: 20em;
+            height: 35em;
         }
 
         // Effects individual slides
@@ -39,31 +39,28 @@ $arrow-hover: $primary-dark;
             display: flex;
             justify-content: center;
             align-items: center;
-            border: .5em solid lightgrey;
-            border-left: 0;
-            box-sizing: border-box;
-        }
-
-        // Active Slide
-        .slick-center {
-            z-index: 2;
-
-            .portfolio-piece {
-                transition: 1s;
-                background-color: $secondary-dark;
-                height: 100%;
-                width: 100%;
-                z-index: 2;
-            }
         }
 
         // Images
         .portfolio-piece {
             transition: 1s;
-            width: 10em;
-            height: 10em;
+            width: 50em;
+            height: 30em;
             margin: 0;
             background-color: $secondary;
+            cursor: default;
+
+            @include md-box-shadow(1);
+
+            &:hover {
+                cursor: pointer;
+
+                @include md-box-shadow(4);
+            }
+
+            &:active {
+                cursor: default;
+            }
         }
     }
 }

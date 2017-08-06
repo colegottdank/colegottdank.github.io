@@ -4,7 +4,7 @@ import img from "../../images/selfies/ColeGottdank_copy.png";
 import Button from "react-md/lib/Buttons";
 import Divider from "react-md/lib/Dividers";
 import Media from "react-md/lib/Media";
-import 'font-awesome/css/font-awesome.css';
+import "font-awesome/css/font-awesome.css";
 
 /*
 * Section1 contains both LeftHalf and RightHalf
@@ -19,27 +19,47 @@ const Section1 = () =>
 * LeftHalf of Section1
 */
 const LeftHalf = () =>
-	<Media aspectRatio="16-9" forceAspect={true} className="md-cell--6 .md-cell left-half-wrapper">
-		<img src={img} alt="Cartoon Selfie" />
-	</Media>;
+	<section className="md-cell md-cell--7-desktop .md-cell--8-tablet md-cell--4-phone left-half-wrapper">
+		<Media aspectRatio="1-1">
+			<img src={img} alt="Cartoon Selfie" />
+		</Media>
+	</section>;
 
 /*
 * RightHalf of Section1
 */
 const RightHalf = () =>
-	<section className="md-cell--6 .md-cell right-half-wrapper">
+	<section className="md-cell md-cell--5-desktop md-cell--8-tablet md-cell--4-phone right-half-wrapper">
 		<Info
 			header="Who am I?"
 			desc="I'm a frontend developer who prides myself on my ability to
 				craft high-quality, modular, and scalable React.js code
 				utilizing CSS Modules."
 			icons={[
-				{icon: "fa fa-facebook", href: "https://www.facebook.com/cole.gottdank"},
-				{icon: "fa fa-free-code-camp", href: "https://www.freecodecamp.org/colegottdank"},
-				{icon: "fa fa-github", href: "https://www.github.com/colegottdank"},
-				{icon: "fa fa-linkedin", href: "https://www.linkedin.com/in/cole-gottdank-585123140/"},
-				{icon: "fa fa-reddit", href: "https://www.reddit.com/user/nnet3/"},
-				{icon: "fa fa-twitter", href: "https://twitter.com/colegottdank"},
+				{
+					icon: "fa fa-facebook",
+					href: "https://www.facebook.com/cole.gottdank"
+				},
+				{
+					icon: "fa fa-free-code-camp",
+					href: "https://www.freecodecamp.org/colegottdank"
+				},
+				{
+					icon: "fa fa-github",
+					href: "https://www.github.com/colegottdank"
+				},
+				{
+					icon: "fa fa-linkedin",
+					href: "https://www.linkedin.com/in/cole-gottdank-585123140/"
+				},
+				{
+					icon: "fa fa-reddit",
+					href: "https://www.reddit.com/user/nnet3/"
+				},
+				{
+					icon: "fa fa-twitter",
+					href: "https://twitter.com/colegottdank"
+				}
 			]}
 		/>
 		<Info
@@ -61,24 +81,11 @@ const Info = props =>
 				{props.header}
 			</h1>
 			<h3>&lt;/h1&gt;</h3>
+			
 			<Divider />
 			<p>
 				{props.desc}
 			</p>
-			{props.icons !== undefined
-				? props.icons.map(icon =>
-						<Button
-							icon
-							iconClassName={icon.icon}
-							tooltipLabel={icon.icon.replace(/fa fa-/g, "")}
-							tooltipPosition="bottom"
-							className="icon"
-							key={icon.icon}
-							href={icon.href}
-							target="_blank"
-						/>
-					)
-				: null}
 		</div>
 	</section>;
 

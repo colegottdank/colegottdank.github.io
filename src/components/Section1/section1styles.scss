@@ -1,48 +1,52 @@
 @import "../../styles/variables.scss";
 @import "../../styles/mixins.scss";
 
-$section1-height: 48em;
+$section1-height: 100%;
+
+@include react-md-media;
 
 // SECTION1 WRAPPER
 .section1-wrapper {
-    width: 100%;
-    height: $section1-height;
+    width: $width;
     padding: 0 !important;
-    align-items: flex-start;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: stretch;
 
     .left-half-wrapper {
-        display: flex;
-        justify-content: flex-end;
+        margin: 0;
+
+        .md-media {
+            text-align: center;
+            overflow: visible;
+        }
 
         & img {
-            max-height: 53em;
-            max-width: 45em;
-            margin-left: auto;
+            height: 110%;
+            width: 95%;
             z-index: 2;
+            margin: 0 auto;
             pointer-events: none;
         }
     }
 
     .right-half-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        height: 88%;
         z-index: 2;
+        margin: 0;
 
         .info-wrapper {
             display: flex;
             align-items: center;
             text-align: center;
-            height: 50%;
-            width: 85%;
+            height: 43%;
+            width: 100%;
 
             &:hover {
                 background-color: #ff733f;
                 color: white !important;
 
-                h1, h3, p {
+                h1,
+                h3,
+                p {
                     color: white;
                 }
 
@@ -55,12 +59,10 @@ $section1-height: 48em;
                         color: white;
                     }
                 }
-
-                @include angle(after, false, 5deg);
             }
 
             .info-div {
-                padding: 5em;
+                padding: 2em;
             }
 
             & h1 {
@@ -80,11 +82,72 @@ $section1-height: 48em;
                 display: block;
                 margin: 0;
                 margin-top: .5em;
+                padding-bottom: 2em;
             }
         }
-
-        .icon {}
     }
 }
 
-@media only screen and (max-width: $media-query) {}
+//Desktop only
+@media only screen and (min-width: $md-desktop-min-width) {
+    .section1-wrapper {
+        .info-wrapper {
+            &:hover {
+                @include angle(after, false, 5deg);
+            }
+        }
+    }
+}
+
+//Tablet
+@media only screen and (max-width: $md-desktop-min-width) and (min-width: $md-tablet-min-width) {
+    .section1-wrapper {
+        width: 100%;
+        height: 120%;
+
+        & img {}
+
+        .right-half-wrapper {
+            display: flex;
+            justify-content: center;
+            height: 15em;
+
+            .info-wrapper {
+                width: 85%;
+                height: 100%;
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: $md-tablet-min-width) and (min-width: $md-mobile-min-width) {
+    .section1-wrapper {
+        width: 100%;
+        height: 125%;
+
+        & img {
+            height: 100% !important;
+        }
+
+        .right-half-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 30em;
+
+            .info-wrapper {
+                height: 13em !important;
+                width: 100%;
+                overflow: hidden;
+
+                &:hover {
+                    transition: .5s;
+                }
+
+                .info-div {
+                    padding: 1em;
+                }
+            }
+        }
+    }
+}

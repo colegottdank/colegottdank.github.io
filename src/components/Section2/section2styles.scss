@@ -24,19 +24,19 @@ $wrapper1-height: 100%;
 $skill1-height: 50%;
 $skill1-width: 100%;
 $skill1-background-color: $secondary;
-$skill1-hover: #9C77B6;
+$skill1-hover: #9c77b6;
 
 // Skill div 2
 $skill2-height: 50%;
 $skill2-width: 100%;
 $skill2-background-color: $tertiary;
-$skill2-hover: #E4A92E;
+$skill2-hover: #e4a92e;
 
 // Skill div 3
 $skill3-height: 100%;
 $skill3-width: 40em;
 $skill3-background-color: $primary-light;
-$skill3-hover: #72CCE5;
+$skill3-hover: #72cce5;
 
 // Skill 4, 5, & 6 wrapper
 $wrapper2-width: 100%;
@@ -50,175 +50,68 @@ $wrapper3-height: 100%;
 $skill4-height: 100%;
 $skill4-width: 50%;
 $skill4-background-color: #ff733f;
-$skill4-hover: #E56739;
+$skill4-hover: #e56739;
 
 // Skill div 5
 $skill5-height: 100%;
 $skill5-width: 50%;
 $skill5-background-color: pink;
-$skill5-hover: #E5ADB7;
+$skill5-hover: #e5adb7;
 
 // Skill div 6
 $skill6-height: 100%;
 $skill6-width: 100%;
 $skill6-background-color: $primary;
-$skill6-hover: #3D9FCA;
+$skill6-hover: #3d9fca;
 
 // Entire section2 wrapper
 .section2-wrapper {
     display: flex;
+    align-items: stretch;
     justify-content: center;
-    align-items: flex-start;
     background-color: $background-color;
-    max-height: $height;
-    min-width: 100%;
+    width: 100%;
 
     @include angle(before, true, 5deg);
     @include angle(after, true, 5deg);
 
     .content-wrapper {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        width: $width;
-        height: auto;
+        width: 85%;
     }
 
-    // Default icon styling
-    .section2-arrow-icon {
-        display: inline-block;
-        position: relative;
-        align-self: left;
-        color: black;
-        font-size: 400%;
-        margin: 0;
-
-        // Default icon hover styling
-        &:hover {
-            cursor: pointer;
-            color: $primary-dark;
-        }
-    }
-
-    // Arrow1 overides
-    .arrow1 {
-        top: .4em;
-    }
-
-    // Arrow2 overides
-    .arrow2 {
-        bottom: 4em;
-    }
-
-    // Arrow3 overides
-    .arrow3 {
-        bottom: 4.1em;
-    }
-
-    // Wraps the skill section
-    .skills-wrapper {
-        display: flex;
+    .md-grid {
         justify-content: center;
-        flex-direction: column;
-        margin-top: 5em;
-        height: 58em;
-        width: 100%;
-        overflow: hidden;
-
-        .skills-h1 {
-            font-size: 150%;
-        }
-
-        .skills-p {
-            font-size: 100%;
-        }
-
-        // Default skill styling
-        .skill-div {
-            padding: $padding;
-            box-sizing: border-box;
-            text-align: center;
-            color: black;
-            transition: border-radius $transition-speed;
-            border: $border-width solid $border-color;
-
-            &:hover {
-                border-radius: $border-radius;
-                transition: $transition-speed;
-                color: white;
-            }
-        }
-
-        // Wraps just the skills
-        .allskills-wrapper-div {
-            display: flex;
-            height: $skills-height;
-            width: auto;
-            max-width: $skills-width;
-        }
-
-        // Skill 1 & 2 wrapper
-        .skills-wrapper-div1 {
-            display: flex;
-            flex-direction: column;
-            width: $wrapper1-width;
-            height: $wrapper1-height;
-
-            // Skill #1
-            .skills-div {
-                height: $skill1-height;
-                width: $skill1-width;
-                background-color: $secondary;
-            }
-
-            // Skill #2
-            .skills-div2 {
-                height: $skill2-height;
-                width: $skill2-width;
-                background-color: $skill2-background-color;
-            }
-        }
-
-        // Skill #3
-        .skills-div3 {
-            height: $skill3-height;
-            width: $skill3-width;
-            background-color: $primary-light;
-        }
-
-        // Skill 3, 4 & 5
-        .skills-wrapper-div2 {
-            display: flex;
-            flex-direction: column;
-            height: $wrapper2-height;
-            width: $wrapper2-width;
-
-            .skills-wrapper-div3 {
-                display: flex;
-                height: $wrapper3-height;
-                width: $wrapper3-width;
-
-                .skills-div4 {
-                    background-color: $skill4-background-color;
-                    height: $skill4-height;
-                    width: $skill4-width;
-                }
-
-                .skills-div5 {
-                    border-right: 0;
-                    background-color: $skill5-background-color;
-                    height: $skill5-height;
-                    width: $skill5-width;
-                }
-            }
-
-            .skills-div6 {
-                border-right: 0;
-                width: $skill6-width;
-                height: $skill6-height;
-                background-color: $skill6-background-color;
-            }
-        }
     }
+
+    .skill-paper {
+        margin: 1em;
+    }
+
+    .skill-card {
+        height: 20em;
+    }
+
+    .md-card-title {
+        justify-content: center;
+    }
+
+    .md-card-text {
+        justify-content: center;
+    }
+}
+
+//Desktop only
+@media only screen and (min-width: $md-desktop-min-width) {
+    .section2-wrapper {}
+}
+
+//Tablet
+@media only screen and (max-width: $md-desktop-min-width) and (min-width: $md-tablet-min-width) {
+    .section2-wrapper {
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: $md-tablet-min-width) and (min-width: $md-mobile-min-width) {
+    .section2-wrapper {}
 }

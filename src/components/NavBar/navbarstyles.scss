@@ -4,8 +4,8 @@
 $wrapper-width: 100%;
 
 // Logo
-$logo-height: 5.6em;
-$logo-width: 7em;
+$logo-height: 7em;
+$logo-width: 8em;
 
 // UL
 $ul-width: 100%;
@@ -80,11 +80,11 @@ $navlink-height: 100%;
                     opacity: .7;
                     text-decoration: none;
                     color: white;
-                    font-size: 125%;
+                    font-size: 130%;
                     font-weight: 300;
 
                     &:hover {
-                        opacity: .9;
+                        opacity: 1;
                     }
                 }
 

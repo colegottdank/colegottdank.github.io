@@ -31,6 +31,7 @@
     "react-slick": "^0.14.11",
     "sass": "^1.0.0-beta.2",
     "sass-convert": "^0.5.2",
+    "scrollmagic": "^2.0.5",
     "serve": "^6.0.3",
     "slick-carousel": "^1.6.0",
     "svgo": "^0.7.2",

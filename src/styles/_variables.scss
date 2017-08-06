@@ -1,7 +1,7 @@
 @import "../../node_modules/react-md/src/scss/react-md";
 
-$md-primary-color: $md-teal-500;
-$md-secondary-color: $md-lime-a-400;
+$md-primary-color: $md-teal-500 !default;
+$md-secondary-color: $md-lime-a-400 !default;
 
 @include react-md-everything;
 
@@ -23,7 +23,7 @@ $tertiary-text: #000000;
 
 $text1: lightgrey;
 
-// Sizing
+// Sizing (IF CHANGE, CHANGE VELOCITY.JS SCROLL OFFSET AS WELL)
 $navbar_height: 5em;
 
 // Viewport width
